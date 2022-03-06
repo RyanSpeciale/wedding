@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 const Nav = () => {
     return (
         <div className={styles.container}>
-            <Stack className={styles.stack} direction='row' spacing={1}>
+            <Stack className={styles.stack} direction='row' spacing={2}>
                 <Button className={styles.button}>RSVP</Button>
                 <Button className={styles.button}>Wedding Details</Button>
                 <Button className={styles.button}>Our Story</Button>
