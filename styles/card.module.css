@@ -1,7 +1,3 @@
 .card {
-    background-color: aliceblue;
-    background-image: url('card.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: cadetblue;
 }
