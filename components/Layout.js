@@ -1,13 +1,14 @@
-import Footer from "./Footer";
-import Nav from "./Nav";
-import styles from '../styles/Layout.module.css';
+import styles from '../styles/layout.module.css';
+import Top from './Top';
+import Bottom from './Bottom';
+
 
 const Layout = ({ children }) => {
     return (
         <div className={styles.container}>
-            <Nav />
-            <main className={styles.main}>{ children }</main>
-            <Footer />
+            <Top/>
+            <main>{ children }</main>
+            <Bottom/>
         </div>
     );
 };

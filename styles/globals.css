@@ -1,9 +1,16 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0cm;
+  margin: cm;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+ 
+  background-color: darkolivegreen;
+  background-image: url('image12.jpg');
+  background-position-x: center;
+  background-position-y: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
