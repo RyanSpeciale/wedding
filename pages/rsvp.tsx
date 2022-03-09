@@ -1,9 +1,9 @@
-
+import styles from '../styles/rsvp.module.css'
 
 const rsvp = () => {
     return (
-        <div>
-            <h1>This is RSVP</h1>
+        <div className={styles.container}>
+            <h1>This is rsvp</h1>
         </div>
     );
 };
