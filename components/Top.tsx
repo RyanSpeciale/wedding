@@ -6,8 +6,8 @@ const Top = () => {
     return (
         <div>
             <Box direction="column">
-                <Heading textAlign="center" className={styles.title}>Leah and Ryan</Heading>
-                <Header justify="center" margin='medium'>
+                <Heading level={1} size='large' textAlign="center" className={styles.title}>Leah and Ryan</Heading>
+                <Header justify="center" margin='small'>
                     <Button primary color='black' label='Home'/>
                     <Button primary color='black' label='R.S.V.P'/>
                     <Button primary color='black' label='Registry'/>
