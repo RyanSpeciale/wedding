@@ -8,11 +8,11 @@ const Top = () => {
             <Box direction="column">
                 <Heading level={1} size='large' textAlign="center" className={styles.title}>Leah and Ryan</Heading>
                 <Header justify="center" margin='small'>
-                    <Button primary color='black' label='Home'/>
-                    <Button primary color='black' label='R.S.V.P'/>
-                    <Button primary color='black' label='Registry'/>
-                    <Button primary color='black' label='Details'/>
-                    <Button primary color='black' label='Our Story'/>
+                    <Button primary color='black' href='/' label='Home'/>
+                    <Button primary color='black' href="/rsvp" label='R.S.V.P'/>
+                    <Button primary color='black' href='/registry' label='Registry'/>
+                    <Button primary color='black' href='/weddingdetails' label='Details'/>
+                    <Button primary color='black' href='/ourstory' label='Our Story'/>
                 </Header>
             </Box>
         </div>
