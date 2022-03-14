@@ -12,14 +12,28 @@ const RSVP = () => {
     const [first, setFirst] = React.useState('');
     const [last, setLast] = React.useState('');
     const [email, setEmail] = React.useState('');
-    const [kids, setKids] = React.useState(0);
-    const [meal, setMeal] = React.useState('tbd');
+    const [kids, setKids] = React.useState('');
+    const [meal, setMeal] = React.useState('');
     const [attending, setAttending] = React.useState('')
+
+    const handleSubmit = async (event: any) => {
+        event.preventDefault();
+        const data = {
+            first: first,
+            last: last,
+            email: email,
+            kids: kids,
+            meal: meal,
+            attending: attending
+        }
+        console.log(data)
+    }
+
     
     return (
         <div>
             <Box direction='column' round='medium' align='left' elevation='small' justify='start' alignSelf='center' pad='medium' className={styles.container}>
-                <Box direction='row' pad='medium' gap='small'>
+                <Box direction='row' pad='medium' justify='center' gap='small'>
                     <RadioButtonGroup
                       options={['I will be attending', 'I will not be attending']}
                       name='attending'
@@ -28,24 +42,23 @@ const RSVP = () => {
                       direction='row'
                     />
                 </Box>
-                <FormField label='First Name' name='first'>
+                <FormField label='First Name' name='first' onChange={(event) => { setFirst(event.target.value)}}>
                     <TextInput />
                 </FormField>
-                <FormField label='Last Name' name='last'>
+                <FormField label='Last Name' name='last' onChange={(event) => { setLast(event.target.value)}}>
                     <TextInput />    
                 </FormField>
-                <FormField label='Email Address' name='email'>
+                <FormField label='Email Address' name='email' onChange={(event) => { setEmail(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
                     <TextInput />
                 </FormField>
-                <FormField label='Meal Choice' name='meal'>
-                    <Select options={['tbd']} />
+                <FormField label='Meal Choice' name='meal' onChange={(event) => { setMeal(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
+                    <Select options={['TBD', 'TBD', 'Vegetarian']} />
                 </FormField>
-                <FormField label='Number of Children' name='kids'>
+                <FormField label='Number of Children coming with'  name='kids' onChange={(event) => { setKids(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
                     <Select options={[0, 1, 2, 3]}/>   
                 </FormField>
-                <Box direction='row' align='center' gap='medium' pad='medium' alignContent='center'>
-                    <Button label='Submit'/>
-                    <Button label='Reset' />    
+                <Box direction='row' align='center' justify='center' gap='medium' pad='medium' alignContent='center'>
+                    <Button primary color='black' className={styles.button} onClick={handleSubmit} label='Submit'/>    
                 </Box>
             </Box>
         </div>
