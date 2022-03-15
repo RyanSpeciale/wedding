@@ -1,4 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Great+Vibes&display=swap');
+
 .heading {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Fredoka', sans-serif;
+    margin-left: 1cm;
     
 }
+
+.image {
+    margin-top: 1.5cm;
+}
+
+.registry {
+    margin-top: 3.5cm;
+}
+
+.countdown {
+    font-family: 'Fredoka', sans-serif;
+}
+

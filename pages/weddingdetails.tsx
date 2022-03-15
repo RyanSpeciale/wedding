@@ -2,8 +2,8 @@
 
 const weddingdetails = () => {
     return (
-        <div>
-            <h1>weddingdetails</h1>            
+        <div className={styles.container}>
+                        
         </div>
     );
 };

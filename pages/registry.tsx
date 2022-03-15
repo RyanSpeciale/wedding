@@ -1,18 +1,44 @@
-import { Box, Heading } from 'grommet'
+import { Box, Button, Heading } from 'grommet'
 import styles from '../styles/registry.module.css'
 import Image from 'next/image';
-import img14 from '../photos/14.jpg';
 import img4 from '../photos/4.jpg';
+import { Text } from 'grommet';
+import Countdown from 'react-countdown';
+import Link from 'next/link';
 
 const registry = () => {
+    const renderer = ({ days, hours, minutes, seconds, completed }) => {
+        if (completed) {
+          // Render a completed state
+          return (<Text>The Wedding is here!!!</Text>)
+        } else {
+          // Render a countdown
+          return (<Text margin='small' alignSelf='center' size='large' weight='bold' textAlign='center' className={styles.countdown}>{days} Days {hours} Hours {minutes} Minutes and {seconds} Seconds until the Wedding!!!</Text>)
+        }
+      };
+    
+    
+    
+    
     return (
         <div className={styles.container}>
             <Box direction='row'>
-                <Box direction='column' width='5in' height='6in' margin='medium' >
-                    <Image alt='photo of Leah and Ryan' src={img4} />
+                <Box direction='column' width='5in' height='6.5in' margin='medium' >
+                    <Countdown renderer={renderer} date='2022-10-29'  />
+                    <Image className={styles.image} alt='photo of Leah and Ryan' src={img4} />
                 </Box>
-                <Box height='medium' width='medium' alignContent='center' margin='small' pad='small' >
-                    <Heading level={2} alignSelf='center' size='large' className={styles.heading}>The Registry</Heading>
+                <Box height='medium' border={{ color: 'black', size: 'medium', style: 'double', side: 'all'}} width='large' gap='small' alignContent='center' round='medium' className={styles.registry}  pad='medium' >
+                    <Heading level={1} alignSelf='center' size='medium' className={styles.heading}>The Registry</Heading>
+                    <Text textAlign='center' size='medium' weight='bold'>
+                        First of all Leah and I would like to thank you for coming to the wedding.
+                        We are so excited for our friends and family to come together for our special day.
+                        If you decide that you would like to buy us a wedding gift we have created a Amazon registry.
+                        We are also totally comforatable with recieving cash if you have trouble picking something on the registry.
+                        
+                    </Text>
+                    <Link href='https://www.amazon.com/wedding/ryan-speciale-leah-young--october-2022/registry/23LPY47BST7Q9'  passHref={true} >
+                    <Button size='medium' alignSelf='center' primary label='Take Me To The Registry' color='black' margin='small' />
+                    </Link>
                 </Box>
             </Box>
         </div>
