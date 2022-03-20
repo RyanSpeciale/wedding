@@ -6,8 +6,16 @@ import Layout from '../components/Layout'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const theme = {
+    tab: {
+      color: 'black'
+    }
+  }
+  
+  
+  
   return (
-    <Grommet>
+    <Grommet theme={theme}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
