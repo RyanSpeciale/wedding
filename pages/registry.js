@@ -32,8 +32,7 @@ const registry = () => {
                     <Text textAlign='center' size='medium' weight='bold'>
                         First of all Leah and I would like to thank you for coming to the wedding.
                         We are so excited for our friends and family to come together for our special day.
-                        If you decide that you would like to buy us a wedding gift we have created a Amazon registry.
-                        We are also totally comforatable with recieving cash if you have trouble picking something on the registry.
+                        The button below will take you to our Amazon registry.
                         
                     </Text>
                     <Link href='https://www.amazon.com/wedding/ryan-speciale-leah-young--october-2022/registry/23LPY47BST7Q9'  passHref={true} >
