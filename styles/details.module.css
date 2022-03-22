@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
 .container {
 
 }
@@ -7,10 +10,15 @@
 }
 
 
-.box {
+.mainbox {
     background-color: whitesmoke;
+    margin-top: 0.6cm;
+    
 }
 
-.ceremonytext {
+.text {
     margin-left: 1cm;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5cm;
 }
+
