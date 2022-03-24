@@ -1,5 +1,5 @@
 import styles from '../styles/details.module.css'
-import { Tabs, Tab, Text, Paragraph, Markdown } from 'grommet';
+import { Tabs, Tab, Text, Card, CardHeader } from 'grommet';
 import { Box } from 'grommet';
 import Image from 'next/image';
 import church from '../photos/church.jpg';
@@ -18,7 +18,7 @@ const weddingdetails: React.FC = () => {
                         </Box>
                         <Box direction='column'>
                             <Text className={styles.text} textAlign='justify' >
-                                The Ceremony will be held at Westmont Presbyterian Church in Johnstown.
+                                The Ceremony will be held at Westmont Presbyterian Church in Johnstown, PA.
                                 This was Leah's church growing up and it means so much for her to get married in it. 
                             </Text>
                             <Text className={styles.text} textAlign='justify'>
@@ -32,17 +32,40 @@ const weddingdetails: React.FC = () => {
                     </Box>    
                 </Tab>
                 <Tab title='The Reception' color='black'>
-                    <Box justify='center' elevation='small' round='medium' direction='row' pad='1.5cm' border={{ color: 'black', size: 'medium', style: 'ridge'}} className={styles.box}>
-                        <Image alt='photo of green gables' src={greengables} width={1200} height={1000} /> 
-
+                    <Box justify='center' elevation='small' round='medium' direction='row' pad='1.5cm' border={{ color: 'black', size: 'medium', style: 'ridge'}} className={styles.mainbox}>
+                        <Box className={styles.greenbox}>
+                            <Image alt='a photo of green gables' src={greengables} height={750} width={950} />
+                        </Box>
+                        <Box direction='column'>
+                            <Text className={styles.text} textAlign='justify'>
+                                The reception will be at Green Gables restraunt and Huddleson Court.
+                                Green Gables is about a 20-25 minute drive from the church and the reception will start with cocktail hour at 4 p.m, with dinner and dancing from 5-9 p.m.
+                            </Text>
+                            <Text className={styles.text} textAlign='justify'>
+                                After the reception if you would like to stay in the area we have provided a list of accomadations in the next tab, as well as other information.
+                                Leah and I cannot wait to see you all!
+                            </Text>
+                            <Text className={styles.text} textAlign='center' weight='bolder'>
+                                Green Gables Restraunt and Huddleson Court: 7712 Somerset Pike, Jennerstown, PA 15547.
+                            </Text>
+                        </Box> 
                     </Box>
                 </Tab>
                 <Tab title='Accomidations and Other Info' color='black'>
-                <Box justify='center' elevation='small' round='medium' direction='row' pad='1.5cm' border={{ color: 'black', size: 'medium', style: 'ridge'}} className={styles.box}>
-                    <Paragraph textAlign='center' className={styles.text}>
-                        This is where the hotels will go for the guests
-                    </Paragraph>
-                </Box>
+                    <Box justify='center' elevation='small' gap='medium' alignContent='center' round='medium' direction='column' pad='1.5cm' border={{ color: 'black', size: 'medium', style: 'ridge'}} className={styles.mainbox}>
+                            <Text>There are plenty of places to stay near Green Gables, we have a few listed here for your convenience</Text>
+                            <Box direction='row' gap='medium' responsive={true} wrap={true}>
+                                <Card height='medium' width='small' background='light-3' className={styles.card}>
+                                    <CardHeader className={styles.cardtext}>Hampton Inn Somerset</CardHeader> 
+                                </Card>
+                                <Card height='medium' width='small' background='light-3' className={styles.card}>
+                                
+                                </Card>
+                                <Card height='medium' width='small' background='light-3' className={styles.card}>
+                                
+                                </Card> 
+                            </Box>
+                    </Box>
                 </Tab>
             </Tabs>                
         </div>
