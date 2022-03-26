@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 
-.container {
-
-}
-
-.tabscontainer {
-    
-}
 
 
 .mainbox {
@@ -34,11 +27,15 @@
 
 .card {
     display: flex;
-    padding: 0.7cm;
+}
+
+.title {
+    font-family: cursive;
 }
 
 .cardtext {
-    
+    text-align: center;
+    align-self: center;
 }
 
 .cardimage {

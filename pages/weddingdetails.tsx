@@ -1,12 +1,15 @@
 import styles from '../styles/details.module.css'
-import { Tabs, Tab, Text, Card, CardHeader } from 'grommet';
+import { Tabs, Tab, Text, Card, CardHeader, Button } from 'grommet';
 import { Box } from 'grommet';
+import Rating from '@mui/material/Rating';
 import Image from 'next/image';
 import church from '../photos/church.jpg';
 import greengables from '../photos/greengables.jpg';
+import hampton from '../photos/hamptoninn.jpg';
+import HotelCard from '../components/HotelCard';
 
 const weddingdetails: React.FC = () => {
-   const margins = {}
+   
    
     return (
         <div className={styles.container}>
@@ -53,17 +56,20 @@ const weddingdetails: React.FC = () => {
                 </Tab>
                 <Tab title='Accomidations and Other Info' color='black'>
                     <Box justify='center' elevation='small' gap='medium' alignContent='center' round='medium' direction='column' pad='1.5cm' border={{ color: 'black', size: 'medium', style: 'ridge'}} className={styles.mainbox}>
-                            <Text>There are plenty of places to stay near Green Gables, we have a few listed here for your convenience</Text>
-                            <Box direction='row' gap='medium' responsive={true} wrap={true}>
-                                <Card height='medium' width='small' background='light-3' className={styles.card}>
-                                    <CardHeader className={styles.cardtext}>Hampton Inn Somerset</CardHeader> 
+                            <Text className={styles.title} size='medium' textAlign='center'>There are plenty of places to stay near Green Gables, we have a couple listed here for your convenience.</Text>
+                            <Box direction='row-responsive' gap='medium' justify='center'margin='small' responsive={true} alignContent='center' align='center' wrap={true}>
+                                <Card height='medium' width='medium' background='light-4' className={styles.card}>
+                                    <CardHeader pad='medium' className={styles.cardtext}>Hampton Inn Somerset</CardHeader>
+                                    <Image className={styles.cardimage} alt='photo of hotel' src={hampton} height={150} width={100} />
+                                    <Rating name="read-only" value={3} readOnly />
+                                    <Box direction='row'>
+                                        <Button label='Booking'></Button>
+                                        <Button label='Website'></Button>
+                                    </Box>
                                 </Card>
-                                <Card height='medium' width='small' background='light-3' className={styles.card}>
-                                
+                                <Card height='medium' width='medium' background='light-4'>
+
                                 </Card>
-                                <Card height='medium' width='small' background='light-3' className={styles.card}>
-                                
-                                </Card> 
                             </Box>
                     </Box>
                 </Tab>
