@@ -1,12 +1,11 @@
 import styles from '../styles/details.module.css'
 import { Tabs, Tab, Text, Card, CardHeader, Button } from 'grommet';
 import { Box } from 'grommet';
-import Rating from '@mui/material/Rating';
 import Image from 'next/image';
 import church from '../photos/church.jpg';
 import greengables from '../photos/greengables.jpg';
-import hampton from '../photos/hamptoninn.jpg';
-import HotelCard from '../components/HotelCard';
+import quality from '../photos/qualityinn.jpg';
+import coalminer from '../photos/coalminer.jpg';
 
 const weddingdetails: React.FC = () => {
    
@@ -56,20 +55,35 @@ const weddingdetails: React.FC = () => {
                 </Tab>
                 <Tab title='Accomidations and Other Info' color='black'>
                     <Box justify='center' elevation='small' gap='medium' alignContent='center' round='medium' direction='column' pad='1.5cm' border={{ color: 'black', size: 'medium', style: 'ridge'}} className={styles.mainbox}>
-                            <Text className={styles.title} size='medium' textAlign='center'>There are plenty of places to stay near Green Gables, we have a couple listed here for your convenience.</Text>
+                            <Text className={styles.title} size='large' textAlign='center'>There are plenty of places to stay near Green Gables, we have a couple listed here for your convenience.</Text>
                             <Box direction='row-responsive' gap='medium' justify='center'margin='small' responsive={true} alignContent='center' align='center' wrap={true}>
                                 <Card height='medium' width='medium' background='light-4' className={styles.card}>
-                                    <CardHeader pad='medium' className={styles.cardtext}>Hampton Inn Somerset</CardHeader>
-                                    <Image className={styles.cardimage} alt='photo of hotel' src={hampton} height={150} width={100} />
-                                    <Rating name="read-only" value={3} readOnly />
-                                    <Box direction='row'>
-                                        <Button label='Booking'></Button>
-                                        <Button label='Website'></Button>
+                                    <CardHeader pad='xsmall' margin={{ bottom: '0.5cm'}} className={styles.cardtext}>Quality Inn Somerset</CardHeader>
+                                    <Box direction='row' align='center' alignSelf='center' alignContent='content' basis='1/2'>
+                                        <Image alt='photo of hotel' src={quality} height={200} width={250} />
+                                    </Box>
+                                    <Box direction='row' align='center' alignContent='center' alignSelf='center' margin={{ top: '1cm' }}>
+                                        <Text textAlign='center'>215 Ramada Rd, Somerset, PA 15501, 12 miles from Green Gables, 10% discount, Close to the Turkpike.</Text>
+                                    </Box>
+                                    <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.4cm', bottom: '0.2cm'}}>
+                                        <Button primary color='black' label='Website' />
+                                        <Button primary color='black' label='Booking'/>
                                     </Box>
                                 </Card>
-                                <Card height='medium' width='medium' background='light-4'>
-
+                                <Card height='medium' width='medium' background='light-4' className={styles.card}>
+                                    <CardHeader pad='xsmall' margin={{ bottom: '0.5cm'}} className={styles.cardtext}>Coal Miner's Diner</CardHeader>
+                                    <Box direction='row' align='center' alignSelf='center' alignContent='content' basis='1/2'>
+                                        <Image alt='photo of hotel' src={coalminer} height={200} width={250} />
+                                    </Box>
+                                    <Box direction='row' align='center' alignContent='center' alignSelf='center' margin={{ top: '1cm' }}>
+                                        <Text textAlign='center'>1640 US-30, Jennerstown, PA 15547. Not even a 2 minute drive from Green Gables, Breakfast Included.</Text>
+                                    </Box>
+                                    <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.4cm', bottom: '0.2cm'}}>
+                                        <Button primary color='black' label='Website' />
+                                        <Button primary color='black' label='Booking'/>
+                                    </Box>
                                 </Card>
+                                
                             </Box>
                     </Box>
                 </Tab>

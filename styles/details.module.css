@@ -30,12 +30,14 @@
 }
 
 .title {
-    font-family: cursive;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-weight: 700;
 }
 
 .cardtext {
     text-align: center;
     align-self: center;
+    font-weight: bold;
 }
 
 .cardimage {
