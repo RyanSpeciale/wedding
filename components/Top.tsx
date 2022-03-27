@@ -12,7 +12,6 @@ const Top = () => {
                     <Button primary color='black' href="/rsvp" label='R.S.V.P'/>
                     <Button primary color='black' href='/registry' label='Registry'/>
                     <Button primary color='black' href='/weddingdetails' label='Details'/>
-                    <Button primary color='black' href='/photos' label='Photos' />
                 </Header>
             </Box>
         </div>

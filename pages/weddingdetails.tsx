@@ -80,7 +80,7 @@ const weddingdetails: React.FC = () => {
                                     </Box>
                                     <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.4cm', bottom: '0.2cm'}}>
                                         <Button primary color='black' label='Website' />
-                                        <Button primary color='black' label='Booking'/>
+                                        <Button primary color='black' label='Booking' />
                                     </Box>
                                 </Card>
                                 

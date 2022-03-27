@@ -12,8 +12,8 @@ const Details = () => {
                 </CardHeader>
                 <CardBody className={styles.body} align="center">
                     <Text weight='bold' margin='small'>October 29th, 2022</Text>
-                    <Text weight='bold' margin='small'>Ceremony @ Westmont Presbyterian Church. 601 Luzerne St. Johnstown, PA 15905</Text>
-                    <Text weight='bold' margin='xsmall'>Reception to Follow @ Green Gables Restraunt. 7712 Somerset Pk. Jennerstown, PA 15547</Text>
+                    <Text weight='bold' margin='small'>Ceremony at Westmont Presbyterian Church. 601 Luzerne St. Johnstown, PA 15905. 1 p.m.</Text>
+                    <Text weight='bold' margin='xsmall'>Reception to Follow at Green Gables Restaraunt. 7712 Somerset Pk. Jennerstown, PA 15547. Cocktail Hour starting at 4 p.m.</Text>
                 </CardBody>
                 <CardFooter></CardFooter>
             </Card>

@@ -52,7 +52,7 @@ const RSVP = () => {
                     <TextInput />
                 </FormField>
                 <FormField label='Meal Choice' name='meal' onChange={(event) => { setMeal(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
-                    <Select options={['TBD', 'TBD', 'Vegetarian']} />
+                    <Select options={['Garlic & Rosemary Prime Rib w/ Garlic Whipped Potatoes', 'Roasted Chicken Breast with Basil & Shrimp Stuffing, Pesto Whipped Potatoes, and Tomato Cream Sauce', '*I have a dietary restriction* (We will contact you)']} />
                 </FormField>
                 <FormField label='Number of Children coming with'  name='kids' onChange={(event) => { setKids(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
                     <Select options={[0, 1, 2, 3]}/>   
