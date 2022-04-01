@@ -78,7 +78,7 @@ const weddingdetails: React.FC = () => {
                                     <Box direction='row' align='center' alignContent='center' alignSelf='center' margin={{ top: '1cm' }}>
                                         <Text textAlign='center'>If the Holiday Inn doesn't work for you. About a 2 minute drive from Green Gables. 1640 US-30, Jennerstown, PA 15547.</Text>
                                     </Box>
-                                    <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.4cm', bottom: '0.2cm'}}>
+                                    <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.5cm', bottom: '0.2cm'}}>
                                         <Button primary color='black' label='Website' />
                                         <Button primary color='black' label='Booking' />
                                     </Box>

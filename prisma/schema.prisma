@@ -1,5 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
@@ -10,4 +8,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
+model Guest {
+  id            String       @default(cuid()) @id
+  first         String
+  last          String
+  attending     String
+  email         String       @unique
+  meal          String?
+  kids          String?
+}

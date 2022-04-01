@@ -1,11 +1,12 @@
 import styles from '../styles/rsvp.module.css'
-import { CheckBox, CheckBoxGroup, Form, RadioButtonGroup, Select } from 'grommet';
+import { RadioButtonGroup, Select } from 'grommet';
 import React from 'react';
 import { FormField } from 'grommet';
 import { TextInput } from 'grommet';
 import { Box } from 'grommet';
 import { Button } from 'grommet';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+
 
 
 const RSVP = () => {
@@ -16,17 +17,18 @@ const RSVP = () => {
     const [meal, setMeal] = React.useState('');
     const [attending, setAttending] = React.useState('')
 
-    const handleSubmit = async (event: any) => {
+    const router = useRouter();
+    
+    const handleSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
-        const data = {
-            first: first,
-            last: last,
-            email: email,
-            kids: kids,
-            meal: meal,
-            attending: attending
-        }
-        console.log(data)
+        const body = { first, last, email, kids, meal, attending }
+        console.log(body);
+        await fetch('/api/rsvp', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+        });
+        router.push()
     }
 
     
