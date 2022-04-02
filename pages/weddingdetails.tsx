@@ -21,10 +21,10 @@ const weddingdetails: React.FC = () => {
                         <Box direction='column'>
                             <Text className={styles.text} textAlign='justify' >
                                 The Ceremony will be held at Westmont Presbyterian Church in Johnstown, PA.
-                                This was Leah's church growing up and it means so much for her to get married in it. 
+                                This was Leah&apos;s church growing up and it means so much for her to get married in it. 
                             </Text>
                             <Text className={styles.text} textAlign='justify'>
-                                The ceremony will start at 12:30 p.m, with BLANK AND BLANK officiating. 
+                                The ceremony will start at 12:30 p.m, with Rev. Ben Nti and Rev. Jim Farrer officiating. 
                                 Following the ceremony we hope you all will join us for the reception at the beautiful Green Gables restraunt.
                             </Text>
                             <Text className={styles.text} textAlign='center' weight='bolder'>
@@ -71,12 +71,12 @@ const weddingdetails: React.FC = () => {
                                     </Box>
                                 </Card>
                                 <Card height='medium' width='medium' background='light-4' className={styles.card}>
-                                    <CardHeader pad='xsmall' margin={{ bottom: '0.5cm'}} className={styles.cardtext}>Coal Miner's Diner</CardHeader>
+                                    <CardHeader pad='xsmall' margin={{ bottom: '0.5cm'}} className={styles.cardtext}>Coal Miner&apos;s Diner</CardHeader>
                                     <Box direction='row' align='center' alignSelf='center' alignContent='content' basis='1/2'>
                                         <Image alt='photo of hotel' src={coalminer} height={200} width={300} />
                                     </Box>
                                     <Box direction='row' align='center' alignContent='center' alignSelf='center' margin={{ top: '1cm' }}>
-                                        <Text textAlign='center'>If the Holiday Inn doesn't work for you. About a 2 minute drive from Green Gables. 1640 US-30, Jennerstown, PA 15547.</Text>
+                                        <Text textAlign='center'>If the Holiday Inn doesn&apos;t work for you. About a 2 minute drive from Green Gables. 1640 US-30, Jennerstown, PA 15547.</Text>
                                     </Box>
                                     <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.5cm', bottom: '0.2cm'}}>
                                         <Button primary color='black' label='Website' />

@@ -1,4 +1,4 @@
-import styles from '../styles/rsvp.module.css'
+import styles from '../../styles/rsvp.module.css';
 import { RadioButtonGroup, Select } from 'grommet';
 import React from 'react';
 import { FormField } from 'grommet';
@@ -6,10 +6,14 @@ import { TextInput } from 'grommet';
 import { Box } from 'grommet';
 import { Button } from 'grommet';
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
 
 
 
 const RSVP = () => {
+    const router = useRouter();
+    
+    
     const [first, setFirst] = React.useState('');
     const [last, setLast] = React.useState('');
     const [email, setEmail] = React.useState('');
@@ -17,18 +21,19 @@ const RSVP = () => {
     const [meal, setMeal] = React.useState('');
     const [attending, setAttending] = React.useState('')
 
-    const router = useRouter();
+    
     
     const handleSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
         const body = { first, last, email, kids, meal, attending }
         console.log(body);
-        await fetch('/api/rsvp', {
+        fetch('/api/rsvp', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body),
+            body: JSON.stringify(body)
         });
-        router.push()
+        Cookies.set('rsvpblock', 'submitted', { expires: 365 })
+        router.push('/thankyou')
     }
 
     
