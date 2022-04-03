@@ -7,12 +7,16 @@ import { Box } from 'grommet';
 import { Button } from 'grommet';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
+import ReCaptchaV2 from 'react-google-recaptcha';
 
 
 
 const RSVP = () => {
     const router = useRouter();
     
+    //if (Cookies.get('rsvpblock') == 'submitted') {
+    //router.push('/error')
+    //}
     
     const [first, setFirst] = React.useState('');
     const [last, setLast] = React.useState('');
@@ -21,7 +25,7 @@ const RSVP = () => {
     const [meal, setMeal] = React.useState('');
     const [attending, setAttending] = React.useState('')
 
-    
+    const siteKey: string = process.env.RECAPTCHA_SITE_KEY!;
     
     const handleSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
@@ -49,24 +53,25 @@ const RSVP = () => {
                       direction='row'
                     />
                 </Box>
-                <FormField label='First Name' name='first' onChange={(event) => { setFirst(event.target.value)}}>
+                <FormField label='First Name' name='first' required={true}  onChange={(event) => { setFirst(event.target.value)}}>
                     <TextInput />
                 </FormField>
-                <FormField label='Last Name' name='last' onChange={(event) => { setLast(event.target.value)}}>
+                <FormField label='Last Name' name='last' required={true} onChange={(event) => { setLast(event.target.value)}}>
                     <TextInput />    
                 </FormField>
-                <FormField label='Email Address' name='email' onChange={(event) => { setEmail(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
+                <FormField label='Email Address' name='email'  required={(attending == 'I will be attending' ? true : false)} onChange={(event) => { setEmail(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
                     <TextInput />
                 </FormField>
-                <FormField label='Meal Choice' name='meal' onChange={(event) => { setMeal(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
+                <FormField label='Meal Choice' name='meal' required={(attending == 'I will be attending' ? true : false)}  onChange={(event) => { setMeal(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
                     <Select options={['Garlic & Rosemary Prime Rib w/ Garlic Whipped Potatoes', 'Roasted Chicken Breast with Basil & Shrimp Stuffing, Pesto Whipped Potatoes, and Tomato Cream Sauce', '*I have a dietary restriction* (We will contact you)']} />
                 </FormField>
-                <FormField label='Number of Children coming with'  name='kids' onChange={(event) => { setKids(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
+                <FormField label='Number of Children coming with' required={(attending == 'I will be attending' ? true : false)}  name='kids' onChange={(event) => { setKids(event.target.value)}}  disabled={attending == 'I will be attending' ? false : true}>
                     <Select options={[0, 1, 2, 3]}/>   
                 </FormField>
                 <Box direction='row' align='center' justify='center' gap='medium' pad='medium' alignContent='center'>
                     <Button primary color='black' className={styles.button} onClick={handleSubmit} label='Submit'/>    
                 </Box>
+                <ReCaptchaV2 sitekey={siteKey} />
             </Box>
         </div>
     )

@@ -9,7 +9,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   const theme = {
     tab: {
       color: 'black'
+    },
+    formField: {
+      label: {
+        requiredIndicator: true
+      }
     }
+
   }
   
   
