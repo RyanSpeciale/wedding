@@ -4,7 +4,7 @@ import Bottom from './Bottom';
 
 const Layout = ({ children }) => {
     return (
-        <div className={styles.container}>
+        <div>
             <Top/>
             <main>{ children }</main>
             <Bottom/>
