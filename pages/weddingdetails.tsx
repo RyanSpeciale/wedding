@@ -6,6 +6,7 @@ import church from '../photos/church.jpg';
 import greengables from '../photos/greengables.jpg';
 import holidy from '../photos/holiday-inn-johnstown.jpg';
 import coalminer from '../photos/coalminer.jpg';
+import Link from 'next/link';
 
 const weddingdetails: React.FC = () => {
    
@@ -66,8 +67,12 @@ const weddingdetails: React.FC = () => {
                                         <Text textAlign='center'>Host Hotel, this is where we suggest you stay. 250 Market St, Johnstown, PA 15901. We are looking into a shuttle to and from Green Gables.</Text>
                                     </Box>
                                     <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.5cm', bottom: '0.2cm'}}>
-                                        <Button primary color='black' label='Website' />
-                                        <Button primary color='black' label='Booking'/>
+                                       <Link href='https://www.ihg.com/holidayinn/hotels/us/en/johnstown/jstmk/hoteldetail?cm_mmc=GoogleMaps-_-HI-_-US-_-JSTMK' passHref={true} >
+                                            <Button primary color='black' label='Website' />
+                                       </Link>
+                                       <Link href='https://www.google.com/travel/hotels/holiday%20inn%20downtown%20johnstown/entity/CgsI2dvMmriF7IPQARAB/prices?q=holiday%20inn%20downtown%20johnstown&g2lb=2502548%2C2503771%2C2503781%2C2503972%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4401769%2C4429192%2C4597339%2C4640247%2C4647135%2C4649665%2C4680677%2C4716131%2C4722435%2C4722900%2C4723331%2C4726607%2C4733969%2C4734964%2C4736008&hl=en-US&gl=us&cs=1&ssta=1&rp=OAJAAEgBwAEC&ictx=1&ved=0CAAQ5JsGahcKEwjYt4Db8vj2AhUAAAAAHQAAAAAQCw&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESABpJCisSJzIlMHg4OWNiMTE0OWQ1OGFjNzUxOjB4ZDAwN2IwMmI4MzUzMmRkORoAEhoSFAoHCOYPEAoYHBIHCOYPEAoYHhgCMgIIASoJCgU6A1VTRBoA&ap=MAE' passHref={true}>
+                                            <Button primary color='black' label='Booking'/>
+                                       </Link> 
                                     </Box>
                                 </Card>
                                 <Card height='medium' width='medium' background='light-4' className={styles.card}>
@@ -79,8 +84,12 @@ const weddingdetails: React.FC = () => {
                                         <Text textAlign='center'>If the Holiday Inn doesn&apos;t work for you. About a 2 minute drive from Green Gables. 1640 US-30, Jennerstown, PA 15547.</Text>
                                     </Box>
                                     <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.5cm', bottom: '0.2cm'}}>
-                                        <Button primary color='black' label='Website' />
-                                        <Button primary color='black' label='Booking' />
+                                         <Link href='https://www.facebook.com/Coal-Miners-Diner-107432313958666/' passHref={true} >
+                                            <Button primary color='black' label='Website' />
+                                       </Link>
+                                       <Link href='https://www.facebook.com/Coal-Miners-Diner-107432313958666/' passHref={true}>
+                                            <Button primary color='black' label='Booking'/>
+                                       </Link>
                                     </Box>
                                 </Card>
                                 

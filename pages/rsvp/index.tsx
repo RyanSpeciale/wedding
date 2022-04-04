@@ -7,7 +7,9 @@ import { Box } from 'grommet';
 import { Button } from 'grommet';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
-import ReCaptchaV2 from 'react-google-recaptcha';
+import ReCaptcha, { ReCAPTCHA } from 'react-google-recaptcha';
+import { Spinner } from 'grommet';
+
 
 
 
@@ -24,14 +26,17 @@ const RSVP = () => {
     const [kids, setKids] = React.useState('');
     const [meal, setMeal] = React.useState('');
     const [attending, setAttending] = React.useState('')
-
-    const siteKey: string = process.env.RECAPTCHA_SITE_KEY!;
+    const [loading, setLoading] = React.useState(false)
+    
+    
+    
     
     const handleSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
+        setLoading(true);
         const body = { first, last, email, kids, meal, attending }
         console.log(body);
-        fetch('/api/rsvp', {
+        await fetch('/api/rsvp', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
@@ -40,6 +45,15 @@ const RSVP = () => {
         router.push('/thankyou')
     }
 
+    if (loading == true) {
+        return (
+            <div>
+                <Box direction='row' justify='center' margin='large' basis='1/2' alignContent='center'  alignSelf='center'>
+                    <Spinner size='large'/>
+                </Box>
+            </div>
+        )
+    }
     
     return (
         <div>
@@ -71,7 +85,10 @@ const RSVP = () => {
                 <Box direction='row' align='center' justify='center' gap='medium' pad='medium' alignContent='center'>
                     <Button primary color='black' className={styles.button} onClick={handleSubmit} label='Submit'/>    
                 </Box>
-                <ReCaptchaV2 sitekey={siteKey} />
+                <ReCaptcha
+                  sitekey='6Lf4Z0AfAAAAAEHSEMEtP_UMBJo4e3fXqlLPvaho'
+                  size='invisible'
+                />
             </Box>
         </div>
     )

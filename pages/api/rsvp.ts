@@ -1,11 +1,12 @@
-import prisma from "../../util/prisma";
+import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+const client: PrismaClient = new PrismaClient();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { first, last, email, kids, meal, attending } = req.body;
+    const { first, last, email, kids, meal, attending } = req.body; 
     try {
-        const result = await prisma.guest.create({
+        const result = await client.guest.create({
             data: {
               first: first,
               last: last,
