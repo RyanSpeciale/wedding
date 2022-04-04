@@ -9,6 +9,5 @@ This is a website that I am building as a challenge to see if I could create a b
 3. Used CSS modules to style the site
 4. Used a PostgreSQL database for data collection.
 
-**Things that I am thinking about adding**
-1. Possibly adding authentication with NextAuth using Providers
+
 

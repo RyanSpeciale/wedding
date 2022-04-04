@@ -17,7 +17,7 @@ const registry = () => {
         }
       };
     
-    
+      
     
     
     return (
@@ -35,7 +35,7 @@ const registry = () => {
                         The button below will take you to our Amazon registry.
                         
                     </Text>
-                    <Link href='https://www.amazon.com/wedding/ryan-speciale-leah-young--october-2022/registry/23LPY47BST7Q9'  passHref={true} >
+                    <Link href={process.env.NEXT_PUBLIC_AMAZON_REGISTRY_URL}  passHref={true} >
                     <Button size='medium' alignSelf='center' primary label='Take Me To The Registry' color='black' margin='small' />
                     </Link>
                 </Box>
