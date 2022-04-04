@@ -1,4 +1,3 @@
-import styles from '../styles/layout.module.css';
 import Top from './Top';
 import Bottom from './Bottom';
 
