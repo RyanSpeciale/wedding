@@ -1,8 +1,7 @@
-import styles from '../styles/home.module.css';
 import Details from '../components/Details';
 import { Box } from 'grommet';
 import Slides from '../components/Slides';
-
+import styles from '../styles/index.module.css';
 
 const Home = () => {
   return (
