@@ -7,7 +7,7 @@ import { Box } from 'grommet';
 import { Button } from 'grommet';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
-
+import axios from 'axios';
 import { Spinner } from 'grommet';
 
 
@@ -34,8 +34,14 @@ const RSVP = () => {
     const handleSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
         setLoading(true);
-        const body = { first, last, email, kids, meal, attending }
-        console.log(body);
+        const body = {
+            first: first,
+            last: last,
+            email: email,
+            kids: kids,
+            meal: meal
+        }
+        console.log(body)
         await fetch('/api/rsvp', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
