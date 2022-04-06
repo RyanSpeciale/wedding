@@ -1,4 +1,4 @@
-import styles from '../../styles/rsvp.module.css';
+import styles from '../styles/rsvp.module.css';
 import { RadioButtonGroup, Select } from 'grommet';
 import React from 'react';
 import { FormField } from 'grommet';
@@ -6,7 +6,6 @@ import { TextInput } from 'grommet';
 import { Box } from 'grommet';
 import { Button } from 'grommet';
 import { useRouter } from 'next/router';
-import Cookies from 'js-cookie';
 import axios from 'axios';
 import { Spinner } from 'grommet';
 
