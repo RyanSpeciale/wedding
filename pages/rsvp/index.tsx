@@ -43,12 +43,23 @@ const RSVP = () => {
             attending: attending
         }
         console.log(body)
-        await fetch('/api/rsvp', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body)
-        });
-        router.push('/thankyou')
+        axios.post('/api/rsvp', {
+            first: first,
+            last: last,
+            email: email,
+            kids: kids,
+            meal: meal,
+            attending: attending
+        })
+        .then(function (response) {
+            console.log(response);
+            router.push('/thankyou')
+        })
+        .catch(function (error) {
+            console.log(error);
+            router.push('/thankyou')
+        })
+        
     }
 
     if (loading == true) {
@@ -69,7 +80,6 @@ const RSVP = () => {
                       options={['I will be attending', 'I will not be attending']}
                       name='attending'
                       onChange={(event) => setAttending(event.target.value)}
-                      value={attending}
                       direction='row'
                     />
                 </Box>
