@@ -10,7 +10,7 @@ datasource db {
   referentialIntegrity = "prisma"
 }
 
-model Guest {
+model guest {
   id            String       @default(cuid()) @id
   first         String
   last          String

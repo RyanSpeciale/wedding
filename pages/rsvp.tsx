@@ -46,10 +46,10 @@ const RSVP = () => {
         axios.post('/api/rsvp', {
             first: first,
             last: last,
+            attending: attending,
             email: email,
             kids: kids,
             meal: meal,
-            attending: attending
         })
         .then(function (response) {
             console.log(response);
@@ -57,7 +57,7 @@ const RSVP = () => {
         })
         .catch(function (error) {
             console.log(error);
-            router.push('/thankyou')
+            router.push('/error')
         })
         
     }
