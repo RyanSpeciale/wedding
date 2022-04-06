@@ -7,7 +7,7 @@ import { Box } from 'grommet';
 import { Button } from 'grommet';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
-import ReCaptcha, { ReCAPTCHA } from 'react-google-recaptcha';
+
 import { Spinner } from 'grommet';
 
 
@@ -85,10 +85,6 @@ const RSVP = () => {
                 <Box direction='row' align='center' justify='center' gap='medium' pad='medium' alignContent='center'>
                     <Button primary color='black' className={styles.button} onClick={handleSubmit} label='Submit'/>    
                 </Box>
-                <ReCaptcha
-                  sitekey='6Lf4Z0AfAAAAAEHSEMEtP_UMBJo4e3fXqlLPvaho'
-                  size='invisible'
-                />
             </Box>
         </div>
     )
