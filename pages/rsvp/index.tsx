@@ -39,7 +39,8 @@ const RSVP = () => {
             last: last,
             email: email,
             kids: kids,
-            meal: meal
+            meal: meal,
+            attending: attending
         }
         console.log(body)
         await fetch('/api/rsvp', {
@@ -47,7 +48,6 @@ const RSVP = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
         });
-        Cookies.set('rsvpblock', 'submitted', { expires: 365 })
         router.push('/thankyou')
     }
 
