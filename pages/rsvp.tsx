@@ -17,7 +17,7 @@ const RSVP = () => {
     
     //if (Cookies.get('rsvpblock') == 'submitted') {
     //router.push('/error')
-    //}
+    ///}
     
     const [first, setFirst] = React.useState('');
     const [last, setLast] = React.useState('');
