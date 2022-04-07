@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { first, last, attending, email, meal, kids } = req.body;
-    if (req.method == 'POST') {
+    if (req.method === 'POST') {
         try {
             const createGuest = await prisma.guest.create({
                 data: {
@@ -20,6 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             res.status(403).json({ dberror: error})
         }
     } else {
-        res.status(404)
+        res.status(409)
     }
 }
