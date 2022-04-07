@@ -33,22 +33,18 @@ const RSVP = () => {
     const handleSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
         setLoading(true);
-        await axios.post('/api/rsvp', {
-            first: first,
-            last: last,
-            attending: attending,
-            email: email,
-            kids: kids,
-            meal: meal,
-        })
-        .then(function (response) {
-            console.log(response);
-            router.push('/thankyou')
-        })
-        .catch(function (error) {
-            console.log(error);
-            router.push('/error')
-        })
+        try {
+			const body = { first, last, attending, email, meal, kids };
+			await fetch('/api/rsvp', {
+				method: 'POST',
+                mode: 'cors',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(body),
+			})
+			router.push('/thankyou');
+		} catch (err) {
+			console.error(err)
+		}
         
     }
 
