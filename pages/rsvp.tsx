@@ -33,16 +33,7 @@ const RSVP = () => {
     const handleSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
         setLoading(true);
-        const body = {
-            first: first,
-            last: last,
-            email: email,
-            kids: kids,
-            meal: meal,
-            attending: attending
-        }
-        console.log(body)
-        axios.post('/api/rsvp', {
+        await axios.post('/api/rsvp', {
             first: first,
             last: last,
             attending: attending,
