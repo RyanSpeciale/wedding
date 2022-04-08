@@ -13,11 +13,11 @@ const RSVP = () => {
     return (
         <div className={styles.container}>
             <Box>
-                <Box justify='center' align='center' round='medium' alignContent='center' gap='medium' margin='medium' className={styles.box}>
-                    <Text textAlign='center' alignSelf='center'>
-                     Due to this site having to be up for 6 months, and the semi-sensitive nature of the information we need from you, we have decided to hand the reins over to Google.
-                     The button below will take you to a Google Form where you will RSVP at.
-                     Click the button below and fill out the form to RSVP.
+                <Box justify='center' align='center' pad='small' border={{ color: 'black', style: 'dotted', size: 'medium' }} round='medium' alignContent='center' gap='medium' margin='medium' className={styles.box}>
+                    <Text textAlign='center' alignSelf='center' weight='bold'>
+                      Please click the button below to RSVP. This button will take you to a Google Form to collect your information.
+                      If you want to continue to browse the website while you fill out the form, you can always right click on the button and click &quot;Open Link In New Tab&quot;.
+                      Once you submit the form, you are good to go! You will recieve an email with your RSVP responses and if you ever need to change the information provided just submit a new form!
                     </Text>
                     <Link href='https://forms.gle/8WA4Bj45UXEsvbNYA'  passHref={true}>
                         <Button primary color='black' label='Click here to RSVP'/>
