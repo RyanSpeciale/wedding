@@ -6,7 +6,7 @@ import styles from '../styles/index.module.css';
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Box direction='row' gap='4cm'  className={styles.box}>
+      <Box direction='row-responsive' gap='4cm' responsive={true} className={styles.box}>
         <Details />
         <Slides />
       </Box>

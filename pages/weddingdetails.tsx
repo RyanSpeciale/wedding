@@ -25,7 +25,7 @@ const weddingdetails: React.FC = () => {
                                 This was Leah&apos;s church growing up and it means so much for her to get married in it. 
                             </Text>
                             <Text className={styles.text} textAlign='justify'>
-                                The ceremony will start at 12:30 p.m, with Rev. Ben Nti and Rev. Jim Farrer officiating. 
+                                The ceremony will start at 1 p.m, with Rev. Ben Nti and Rev. Jim Farrer officiating. 
                                 Following the ceremony we hope you all will join us for the reception at the beautiful Green Gables restraunt.
                             </Text>
                             <Text className={styles.text} textAlign='center' weight='bolder'>
@@ -64,7 +64,7 @@ const weddingdetails: React.FC = () => {
                                         <Image alt='photo of hotel' src={holidy} height={200} width={300} />
                                     </Box>
                                     <Box direction='row' align='center' alignContent='center' alignSelf='center' margin={{ top: '1cm' }}>
-                                        <Text textAlign='center'>Host Hotel, this is where we suggest you stay. 250 Market St, Johnstown, PA 15901. We are looking into a shuttle to and from Green Gables.</Text>
+                                        <Text textAlign='center'>Host Hotel, this is where we suggest you stay. 250 Market St, Johnstown, PA 15901.</Text>
                                     </Box>
                                     <Box gap='medium' direction='row' align='center' alignContent='center' justify='center' margin={{ top: '0.5cm', bottom: '0.2cm'}}>
                                        <Link href='https://www.ihg.com/holidayinn/hotels/us/en/johnstown/jstmk/hoteldetail?cm_mmc=GoogleMaps-_-HI-_-US-_-JSTMK' passHref={true} >
