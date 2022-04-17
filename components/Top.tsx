@@ -7,7 +7,7 @@ const Top = () => {
         <div>
             <Box direction="column">
                 <Heading level={1} size='large' textAlign="center" className={styles.title}>Leah and Ryan</Heading>
-                <Header justify="center" margin='small'>
+                <Header justify="center" basis="1/2" margin='small'>
                     <Button primary color='black' href='/' label='Home'/>
                     <Button primary color='black' href="/rsvp" label='R.S.V.P'/>
                     <Button primary color='black' href='/registry' label='Registry'/>

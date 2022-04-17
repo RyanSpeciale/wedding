@@ -19,7 +19,7 @@ const RSVP = () => {
                       If you want to continue to browse the website while you fill out the form, you can always right click on the button and then click &quot;Open Link In New Tab&quot;.
                       After you submit the form you will recieve an email with your RSVP responses and if you ever need to change the information provided, just submit a new form!
                     </Text>
-                    <Link href='https://forms.gle/8WA4Bj45UXEsvbNYA'  passHref={true}>
+                    <Link href='https://forms.gle/8WA4Bj45UXEsvbNYA' passHref={true}>
                         <Button primary color='black' label='Click here to RSVP'/>
                     </Link>
                 </Box>
