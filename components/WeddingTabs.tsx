@@ -1,8 +1,5 @@
 import React from 'react';
-import { Tabs, Tab, Text, Card, CardHeader, Button, Box } from 'grommet';
-
-
-
+import { Tabs, Tab, Text, Card, CardHeader, Button, Box } from 'grommet'
 
 
 const WeddingTabs = () => {
