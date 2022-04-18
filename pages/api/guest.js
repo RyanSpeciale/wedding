@@ -16,7 +16,7 @@ export default async function handler(req, res) {
           meal: meal
         },
       })
-      res.json({ created: result })
+      res.json({ success: result })
     } catch (error) {
       res.json({ problem: error })
     }
