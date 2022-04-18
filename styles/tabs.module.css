@@ -1,3 +1,18 @@
 .address {
     font-weight: bold;
 }
+
+.container {
+    margin-top: 0.6cm;
+}
+
+.card {
+    background-color: white;
+    margin-top: 0.3cm;
+}
+
+.header {
+    font-size: x-large;
+    font-weight: bold;
+}
+
