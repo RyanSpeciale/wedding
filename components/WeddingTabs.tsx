@@ -16,6 +16,7 @@ import Image from 'next/image';
 import church from '../photos/church.jpg';
 import green from '../photos/greengables.jpg';
 import Link from 'next/link';
+import booking from './booking.png'
 
 const WeddingTabs = () => {
 	return (
@@ -98,23 +99,36 @@ const WeddingTabs = () => {
 							</CardHeader>
 							<CardBody pad='small'>
 								<Paragraph>
-									This is where our families and us will be staying. We suggest
-									that everyone stays here, especially if you want to have
-									brunch with us in the morning.
+									This is the Host Hotel.
 								</Paragraph>
 								<Paragraph>
 									Everyone that stays here from the wedding will receive a 10%
-									discount and rooms are already reasonable at around $100 a
-									night. We have also reserved a shuttle to and from the
-									reception.
+									discount. The button below will take you to the booking page
+									for our block of rooms. If for whatever reason this does not work, just call the Holiday Inn and tell them you want to reserve for the Young and Speciale Wedding.
+									If booking online, click the button below, select the dates you want either 10/28 or 10/29 through 10/30 and keep the form as below.
 								</Paragraph>
+								<Image src={booking} alt='Booking Intructions'  />
 								<Text weight='bold'>250 Market St, Johnstown, PA 15901</Text>
 								<Link
-									href='https://www.google.com/travel/hotels/holiday%20inn%20downtown%20johnstown/entity/CgsI2dvMmriF7IPQARAB/prices?q=holiday%20inn%20downtown%20johnstown&g2lb=2502548%2C2503771%2C2503781%2C2503972%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4401769%2C4429192%2C4597339%2C4640247%2C4647135%2C4649665%2C4680677%2C4716131%2C4722435%2C4722900%2C4723331%2C4726607%2C4733969%2C4734964%2C4736008&hl=en-US&gl=us&cs=1&ssta=1&rp=OAJAAEgBwAEC&ictx=1&ved=0CAAQ5JsGahcKEwjYt4Db8vj2AhUAAAAAHQAAAAAQCw&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESABpJCisSJzIlMHg4OWNiMTE0OWQ1OGFjNzUxOjB4ZDAwN2IwMmI4MzUzMmRkORoAEhoSFAoHCOYPEAoYHBIHCOYPEAoYHhgCMgIIASoJCgU6A1VTRBoA&ap=MAE'
+									href='https://www.holidayinn.com/redirect?path=hd&brandCode=HI&localeCode=en&regionCode=1&hotelCode=JSTMK&_PMID=99801505&GPC=YSW&cn=no&viewfullsite=true'
 									passHref={true}
 								>
 									<Button className={styles.button} primary label='Booking' />
 								</Link>
+							</CardBody>
+						</Card>
+						<Card className={styles.card} width='medium'>
+							<CardHeader alignSelf='center' className={styles.header}>
+								Shuttle
+							</CardHeader>
+							<CardBody pad='small'>
+								<Paragraph>
+									There will be a shuttle available to take guests from the Holiday Inn to and from the reception.
+									Please indicate on the RSVP Google form if you are interested in using this service.
+								</Paragraph>
+								<Paragraph>
+									There will be more information provided closer to the date of the wedding.
+								</Paragraph>
 							</CardBody>
 						</Card>
 						<Card className={styles.card} width='medium'>
