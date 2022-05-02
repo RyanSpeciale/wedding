@@ -28,7 +28,7 @@ const RSVP = () => {
 					>
 						Thank You so much for your RSVP! Due to the insane cost of hosting,
 						the button below will take you to a Google Form to complete your
-						reservation. If you would like like to continue to browse the site,
+						reservation. If you would like to continue to browse the site,
 						just right click on the button and then click &quot;Open Link in New Tab&quot;
 					</Text>
 					<Link href='https://forms.gle/MQKKkQVbAmmG2Swm7' passHref={true}>
